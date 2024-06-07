@@ -34,7 +34,7 @@ CREATE TABLE vaccine_step (
     step_number INT NOT NULL,
     step_name VARCHAR(255) NOT NULL,
     step_timing INTERVAL NOT NULL,
-    FOREIGN KEY (vaccine_type_id) REFERENCES vaccine_types(id)
+    FOREIGN KEY (vaccine_type_id) REFERENCES vaccine_type(id)
 );
 
 CREATE TABLE child_vaccine_progress (
