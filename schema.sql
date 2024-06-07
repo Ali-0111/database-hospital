@@ -40,11 +40,15 @@ CREATE TABLE vaccine_step (
 CREATE TABLE child_vaccine_progress (
     id SERIAL PRIMARY KEY,
     child_id INT NOT NULL,
+    hospital_id INT NOT NULL,
+    nurse_id INT NOT NULL,
     step_number INT NOT NULL,
     vaccine_type_id INT NOT NULL,
     vaccine_timed_at TIMESTAMP,
     time_taken INTERVAL,
     status VARCHAR(50) NOT NULL,
     FOREIGN KEY (child_id) REFERENCES child(id),
+    FOREIGN KEY (hospital_id) REFERENCES hospital(id),
+    FOREIGN KEY (nurse_id) REFERENCES nurse(id),
     FOREIGN KEY (vaccine_type_id) REFERENCES vaccine_type(id)
 );
