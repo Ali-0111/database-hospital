@@ -49,6 +49,7 @@ CREATE TABLE vaccine_record (
     vaccination_program_id INT NOT NULL REFERENCES vaccination_program(id),
     vaccine_id INT NOT NULL REFERENCES vaccine(id),
     step_rank INT NOT NULL,
+    step_name VARCHAR(255) NOT NULL,
     step_status VARCHAR(50) NOT NULL,
     vaccination_date TIMESTAMP
 );
