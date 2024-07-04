@@ -28,7 +28,8 @@ VALUES
     ('child_7', 1, 1),
     ('child_8', 1, 1),
     ('child_9', 1, 1),
-    ('child_10', 1, 1);
+    ('child_10', 1, 1),
+    ('child_11', 1, 1);
 
 -- Insert into vaccine table
 INSERT INTO vaccine (name)
