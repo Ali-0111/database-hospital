@@ -35,7 +35,6 @@ INSERT INTO vaccine (name)
 VALUES 
     ('vaccine_1'),
     ('vaccine_2'),
-    ('vaccine_3'),
     ('vaccine_4'),
     ('vaccine_5'),
     ('vaccine_6'),
@@ -48,40 +47,41 @@ VALUES
 INSERT INTO vaccination_program (name, number_of_steps)
 VALUES 
     ('polio', 1),
-    ('5Gana', 3);
+    ('3 Gana', 3)
+    
 
 -- Insert into vaccination_program_step table
 INSERT INTO vaccination_program_step (vaccination_program_id, step_rank, step_name, vaccine_id)
 VALUES 
     (1, 0, 'polio', 1),
-    (2, 0, 'After birth', 1),
     (2, 0, 'After birth', 2),
     (2, 0, 'After birth', 3),
-    (2, 1, 'Month-1', 4),
+    (2, 0, 'After birth', 4),
     (2, 1, 'Month-1', 5),
     (2, 1, 'Month-1', 6),
-    (2, 2, 'Month-2', 7),
+    (2, 1, 'Month-1', 7),
     (2, 2, 'Month-2', 8),
-    (2, 2, 'Month-2', 9);
+    (2, 2, 'Month-2', 9),
+    (2, 2, 'Month-2', 10);
 
--- Insert into vaccine_record table
-INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
-VALUES 
-    (1, 1, 1, 1, 1, 0, 'polio', 'pending'),
-    (1, 1, 1, 2, 2, 0, 'step-1', 'pending'),
-    (1, 1, 1, 2, 3, 0, 'step-1', 'pending'),
-    (1, 1, 1, 2, 4, 0, 'step-1', 'pending'),
+-- -- Insert into vaccine_record table
+-- INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
+-- VALUES 
+--     (1, 1, 1, 1, 1, 0, 'polio', 'pending'),
+--     (1, 1, 1, 2, 2, 0, 'step-1', 'pending'),
+--     (1, 1, 1, 2, 3, 0, 'step-1', 'pending'),
+--     (1, 1, 1, 2, 4, 0, 'step-1', 'pending'),
 
-    (1, 1, 1, 2, 4, 1, 'step-2', 'pending'),
-    (1, 1, 1, 2, 5, 1, 'step-2', 'pending'),
-    (1, 1, 1, 2, 6, 1, 'step-2', 'pending'),
+--     (1, 1, 1, 2, 4, 1, 'step-2', 'pending'),
+--     (1, 1, 1, 2, 5, 1, 'step-2', 'pending'),
+--     (1, 1, 1, 2, 6, 1, 'step-2', 'pending'),
 
-    (1, 1, 1, 2, 7, 2, 'step-3', 'pending'),
-    (1, 1, 1, 2, 8, 2, 'step-3', 'pending'),
-    (1, 1, 1, 2, 9, 2, 'step-3', 'pending');
+--     (1, 1, 1, 2, 7, 2, 'step-3', 'pending'),
+--     (1, 1, 1, 2, 8, 2, 'step-3', 'pending'),
+--     (1, 1, 1, 2, 9, 2, 'step-3', 'pending');
 
-    INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
-VALUES 
+--     INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
+-- VALUES 
     (1, 1, 1, 1, 1, 0, 'polio', 'pending'),
     (1, 1, 1, 2, 2, 0, 'step-1', 'pending'),
     (1, 1, 1, 2, 3, 0, 'step-1', 'pending'),
