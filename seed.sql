@@ -64,6 +64,8 @@ VALUES
     (2, 2, 'Month-2', 9),
     (2, 2, 'Month-2', 10);
 
+-- insert into vaccine_record
+
 INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
 VALUES 
     (1, 1, 1, 1, 1, 0, 'polio', 'pending'),
