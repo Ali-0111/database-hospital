@@ -64,24 +64,8 @@ VALUES
     (2, 2, 'Month-2', 9),
     (2, 2, 'Month-2', 10);
 
--- -- Insert into vaccine_record table
--- INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
--- VALUES 
---     (1, 1, 1, 1, 1, 0, 'polio', 'pending'),
---     (1, 1, 1, 2, 2, 0, 'step-1', 'pending'),
---     (1, 1, 1, 2, 3, 0, 'step-1', 'pending'),
---     (1, 1, 1, 2, 4, 0, 'step-1', 'pending'),
-
---     (1, 1, 1, 2, 4, 1, 'step-2', 'pending'),
---     (1, 1, 1, 2, 5, 1, 'step-2', 'pending'),
---     (1, 1, 1, 2, 6, 1, 'step-2', 'pending'),
-
---     (1, 1, 1, 2, 7, 2, 'step-3', 'pending'),
---     (1, 1, 1, 2, 8, 2, 'step-3', 'pending'),
---     (1, 1, 1, 2, 9, 2, 'step-3', 'pending');
-
---     INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
--- VALUES 
+INSERT INTO vaccine_record (child_id, nurse_id, hospital_id, vaccination_program_id, vaccine_id, step_rank, step_name, step_status)
+VALUES 
     (1, 1, 1, 1, 1, 0, 'polio', 'pending'),
     (1, 1, 1, 2, 2, 0, 'step-1', 'pending'),
     (1, 1, 1, 2, 3, 0, 'step-1', 'pending'),
