@@ -53,3 +53,19 @@ CREATE TABLE vaccine_record (
     step_status VARCHAR(50) NOT NULL,
     vaccination_date TIMESTAMP
 );
+
+-- auth tables 
+
+CREATE TABLE hospital_credentials (
+    id SERIAL PRIMARY KEY,
+    hospital_id INTEGER NOT NULL REFERENCES hospital(id) ON DELETE CASCADE,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE nurse_credentials (
+    id SERIAL PRIMARY KEY,
+    nurse_id INTEGER NOT NULL REFERENCES nurse(id) ON DELETE CASCADE,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
