@@ -58,14 +58,14 @@ CREATE TABLE vaccine_record (
 
 CREATE TABLE hospital_credentials (
     id SERIAL PRIMARY KEY,
-    hospital_id INTEGER NOT NULL REFERENCES hospital(id) ON DELETE CASCADE,
+    hospital_id INTEGER NOT NULL UNIQUE REFERENCES hospital(id) ON DELETE CASCADE,
     username VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE nurse_credentials (
     id SERIAL PRIMARY KEY,
-    nurse_id INTEGER NOT NULL REFERENCES nurse(id) ON DELETE CASCADE,
+    nurse_id INTEGER NOT NULL UNIQUE REFERENCES nurse(id) ON DELETE CASCADE,
     username VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
