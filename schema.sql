@@ -7,6 +7,9 @@ CREATE TABLE hospital (
 CREATE TABLE nurse (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(100) NOT NULL DEFAULT 'safari',
+    phone VARCHAR(30) NOT NULL DEFAULT '0749641270',
+    address VARCHAR(255) NOT NULL DEFAULT 'Kabul Af',
     hospital_id INTEGER NOT NULL,
     FOREIGN KEY (hospital_id) REFERENCES hospital(id)
 );
