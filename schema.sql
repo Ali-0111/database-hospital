@@ -103,3 +103,6 @@ ADD FOREIGN KEY (parent_id) REFERENCES parent(id);
 
 ALTER TABLE child DROP CONSTRAINT child_nurse_id_fkey;
 ALTER TABLE child DROP CONSTRAINT child_hospital_id_fkey;
+
+ALTER TABLE child DROP COLUMN hospital_id;
+ALTER TABLE child DROP COLUMN nurse_id;
