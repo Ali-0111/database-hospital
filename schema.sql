@@ -84,7 +84,7 @@ CREATE TABLE nurse_credentials (
 
 CREATE TABLE parent_credentials (
     id SERIAL PRIMARY KEY,
-    nurse_id INTEGER NOT NULL UNIQUE REFERENCES nurse(id) ON DELETE CASCADE,
+    parent_id INTEGER NOT NULL UNIQUE REFERENCES parent(id) ON DELETE CASCADE,
     username VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
