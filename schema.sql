@@ -106,3 +106,9 @@ ALTER TABLE child DROP CONSTRAINT child_hospital_id_fkey;
 
 ALTER TABLE child DROP COLUMN hospital_id;
 ALTER TABLE child DROP COLUMN nurse_id;
+
+ALTER TABLE IF EXISTS public.child
+    ALTER COLUMN nurse_id DROP NOT NULL;
+
+ALTER TABLE IF EXISTS public.child
+    ALTER COLUMN hospital_id DROP NOT NULL;
