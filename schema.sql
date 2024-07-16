@@ -23,6 +23,15 @@ CREATE TABLE child (
     FOREIGN KEY (hospital_id) REFERENCES hospital(id)
 );
 
+-- new version for child 
+
+-- CREATE TABLE child (
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(255) NOT NULL,
+--     parent_id INTEGER NOT NULL,
+--     FOREIGN KEY (parent_id) REFERENCES parent(id)
+-- );
+
 CREATE TABLE vaccine (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL
@@ -72,3 +81,18 @@ CREATE TABLE nurse_credentials (
     username VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE parent (
+    id SERIAL PRIMARY KEY,
+    family_name VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    phone VARCHAR(50) NOT NULL,
+    president_name VARCHAR(255) NOT NULL
+);
+
+ALTER TABLE child 
+ADD COLUMN parent_id INTEGER,
+ADD FOREIGN KEY (parent_id) REFERENCES parent(id);
+
+ALTER TABLE child DROP CONSTRAINT child_nurse_id_fkey;
+ALTER TABLE child DROP CONSTRAINT child_hospital_id_fkey;
