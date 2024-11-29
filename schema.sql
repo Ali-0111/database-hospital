@@ -25,12 +25,12 @@ CREATE TABLE child (
 
 -- new version for child 
 
--- CREATE TABLE child (
---     id SERIAL PRIMARY KEY,
---     name VARCHAR(255) NOT NULL,
---     parent_id INTEGER NOT NULL,
---     FOREIGN KEY (parent_id) REFERENCES parent(id)
--- );
+CREATE TABLE child (
+   id SERIAL PRIMARY KEY,
+   name VARCHAR(255) NOT NULL,
+   parent_id INTEGER NOT NULL,
+   FOREIGN KEY (parent_id) REFERENCES parent(id)
+);
 
 CREATE TABLE vaccine (
     id SERIAL PRIMARY KEY,
